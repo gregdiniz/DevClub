@@ -1,0 +1,89 @@
+/*PSEUDO CLASSES
+
+:active -> quando o elemento está ativo, ou seja, esta sendo pressionado
+:visited -> seleciona o link que já foi visitado
+:hover -> quando o cursor do mouse está sobre o elemento
+:checked -> usando em radio / checkbox / select
+:disabled -> elemento está desabilitado / button / input
+:enabled -> elemtno está habilitado
+:focus -> é aolicada quando um elemtno recebe foco, o que pode ocorrer quando o usuário seleciona o elemento
+:read-only -> seleciona input ou textarea que são apenas de leitura
+:empty -> elemento que não tem filho
+
+:first-child -> primeiro filho / ex: primeira <li> de uma <ul> / primeiro <span> de uma <div>
+:first-of-type -> primeiro elemento de seu tipo entre os filhos do elemento pai
+:last-child -> último filho
+:last-of-type -> último elemtno do seu tipo entre os filhos do seu elemento pai
+:not() -> estiliza os elementos, exceto o que está dentro do()
+:nth-child() -> seleciona o elemtno baseado na sua posição. Ex: :nth-child(3)
+:nth-last-child() -> seleciona o elemento baseado na sua posição, contando de trás para frente.
+*/
+@charset "UTF-8";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a:active{
+    color: red;
+}
+
+a:hover{
+    cursor: pointer;
+}
+
+input:checked{
+    width: 100px;
+    height: 100px;
+}
+
+input:disabled{
+    width: 20px;
+    height: 20px;
+}
+
+input:focus{
+    outline: none;
+    border: 1px solid red ;
+}
+
+input:read-only{
+    color: blueviolet;
+    border: 1px solid blue;
+}
+
+.div-empty{
+    height: 100px;
+    width: 100px;
+    background-color: red;
+}
+
+.div-empty:empty{
+    background-color: blue;
+}
+
+li:first-child{
+    color: blue;
+}
+
+li:last-child{
+    color: red;
+}
+
+li:nth-child(2){
+    color: darkgoldenrod;
+}
+
+li:nth-last-child(2){
+    color:greenyellow;
+}
+
+span:first-of-type{
+    color: grey;
+}
+
+.container :not(#nao){
+    color: blueviolet;
+}

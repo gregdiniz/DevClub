@@ -1,0 +1,36 @@
+@charset "UTF-8";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*input{
+    border: 1px solid red;
+    color: blue;
+}
+
+input::placeholder{
+    color: #ff1396;
+}
+
+p{
+    color: blue;
+}
+
+p::first-letter{
+    color: brown;
+}*/
+
+a{
+    color: blue;
+}
+
+a::before{
+    content: "→";
+}
+
+a:hover:after{
+    content: " 🤙";
+}
