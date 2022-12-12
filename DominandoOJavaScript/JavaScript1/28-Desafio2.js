@@ -1,4 +1,4 @@
-// 1- [ ] Faça um programa que compare um número com 10 e imprime na tela "o número é maior, o número é menor o número é igual"
+// 1- [X] Faça um programa que compare um número com 10 e imprime na tela "o número é maior, o número é menor o número é igual"
 const q1MinNumber = 1
 const q1MaxNumber = 20
 const q1Number = Math.floor(Math.random() * (q1MaxNumber - q1MinNumber) + q1MinNumber)
@@ -12,7 +12,7 @@ if(q1Number > 10){
 }
 
 console.log()
-// 2- [ ] Faça um programa que verifica se uma pessoa é brasileira ou não. // DEVE SER UM OBJETO
+// 2- [X] Faça um programa que verifica se uma pessoa é brasileira ou não. // DEVE SER UM OBJETO
 const q2Object = {
     name: 'Gregory',
     country: 'Brazil'
@@ -25,7 +25,7 @@ if(q2Object.country === "Brazil"){
 }
 
 console.log()
-// 3- [ ] Faça um programa que gere um número aleatório entre 1 e 10, esse número é o número 'ganhador'. Então ele também irá gerar um número aleatório entre 1 e 10, e verifica se a pessoa ganhou ou não. Em caso de ter ganhado, mostra o prêmio, se não ganhou, mostra outra mensagem.
+// 3- [X] Faça um programa que gere um número aleatório entre 1 e 10, esse número é o número 'ganhador'. Então ele também irá gerar um número aleatório entre 1 e 10, e verifica se a pessoa ganhou ou não. Em caso de ter ganhado, mostra o prêmio, se não ganhou, mostra outra mensagem.
 const q3MaxNumber = 1
 const q3MinNumber = 10
 const q3MyNumber = Math.floor(Math.random() *(q3MaxNumber-q3MinNumber) + q3MinNumber)
@@ -38,7 +38,7 @@ if(q3MyNumber === q3Winner){
 }
 
 console.log()
-// 4- [ ] Faça um programa que receba 3 números inteiros, e deve imprimir, qual é o maior, qual é o menor.
+// 4- [X] Faça um programa que receba 3 números inteiros, e deve imprimir, qual é o maior, qual é o menor.
 const q4MinNumber = 1
 const q4MaxNumber = 15
 const q4Number1 = Math.floor(Math.random() * (q4MaxNumber-q4MinNumber)+q4MinNumber)
@@ -72,12 +72,9 @@ const q5Array = [
 ]
 let q5Aproved = "O(s) aprovado(s) é(são): "
 
-for(let q5Obj of q5Array){
-    for(let q5Prop in q5Obj){
-        if(q5Obj[q5Prop.idade] >= 18 && q5Obj[q5Prop.nascimento] === "Brasileiro(a)" ){
-            //console.log(`${q5Prop}: ${q5Obj[q5Prop]}`)
-            q5Aproved += q5Obj[q5Prop.nome] + " "
-        }
+for(let i=0; i<q5Array.length; i++){
+    if(q5Array[i].idade >= 18 && q5Array[i].nacionalidade === "Brasileiro(a)"){
+        q5Aproved += "-" + q5Array[i].nome + "- "
     }
 }
 
@@ -85,7 +82,7 @@ console.log(`5- ${q5Aproved}`)
 
 
 console.log("")
-//6- [ ] Faça um programa onde os jurados vão dar a explicação para cada nota dada. São permitidas notas de 0 a 10. Cada nota deve conter uma mensagem diferente.
+//6- [X] Faça um programa onde os jurados vão dar a explicação para cada nota dada. São permitidas notas de 0 a 10. Cada nota deve conter uma mensagem diferente.
 const q6MinNota = 0
 const q6MaxNota = 10
 const q6NotaJurado = Math.floor(Math.random() * (q6MaxNota- q6MinNota) + q6MinNota)
@@ -130,7 +127,7 @@ switch (q6NotaJurado) {
 }
 
 console.log("")
-// 7- [ ] Faça um programa onde leia um numero e diga se ele é par ou impar.
+// 7- [X] Faça um programa onde leia um numero e diga se ele é par ou impar.
 const q7MinNumber = 0
 const q7MaxNumber = 100
 const q7Number = Math.floor(Math.random() * (q7MaxNumber-q7MinNumber) + q7MinNumber)
@@ -146,7 +143,7 @@ if(q7Number === 0){
 }
 
 console.log("")
-// 8-[ ] Faça um programa onde leia um número e diga se ele é: - ímpar, - par, - é um número primo e impar, - é par e divisível por 5.
+// 8-[X] Faça um programa onde leia um número e diga se ele é: - ímpar, - par, - é um número primo e impar, - é par e divisível por 5.
 const q8MinNum = 1
 const q8Maxnum = 100
 const q8Number = Math.floor(Math.random() * (q8Maxnum-q8MinNum) + q8MinNum)
@@ -176,7 +173,7 @@ if (q8Number % 2 === 1){
 }
 
 conselo.log("")
-// 9- [ ] Faça um programa onde ele leia 4 números. Em cada caso, ele deve retornar a mensagem condizente: - Todos os números são impares => TODOS OS NÚMEROS SÃO IMPARES - Todos os números são pares => TODOS OS NÚMEROS SÃO PARES. Em caso negativo dos casos a cima, colocar uma mensagem => Há números pares e ímpares.
+// 9- [X] Faça um programa onde ele leia 4 números. Em cada caso, ele deve retornar a mensagem condizente: - Todos os números são impares => TODOS OS NÚMEROS SÃO IMPARES - Todos os números são pares => TODOS OS NÚMEROS SÃO PARES. Em caso negativo dos casos a cima, colocar uma mensagem => Há números pares e ímpares.
 const q9MinNum = 1
 const q9MaxNum = 50
 const q9NumOne = Math.floor(Math.random() * (q9MaxNum-q9MinNum) + q9MinNum)
