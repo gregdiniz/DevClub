@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor Monetário</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="appTitle">
+            <h1>Conversor Monetário</h1>
+        </header>
+        <main>
+            <label>
+                Converter <em>de</em>
+                <select name="" id="">
+                    <option>R$ Real Brasileiro</option>
+                </select>
+            </label>
+            <label>
+                Converter <em>para</em>
+                <select id="slcCurrency">
+                    <option value="dolar">U$ Dólar Americano</option>
+                    <option value="euro">€ Euro</option>
+                </select>
+            </label>
+            <label for="txtAmount">Valor</label>
+            <input type="text" id="txtAmount" placeholder="1000.00">
+            <button id="convertButton" type="button">Converter</button>
+            <section class="convertGraphic">
+                <div class="currencyContainer">
+                    <img src="./assets/BRL.png" class="flag">
+                    <p class="currencyName">Real</p>
+                    <p class="amount" id="lblFrom" alt="Bandeira Brasil">R$ 0,00</p>
+                </div>
+                <img src="./assets/ArrowDown.png" id="arrowDown" alt="Seta para baixo">
+                <div class="currencyContainer">
+                    <img src="./assets/USD.png" class="flag" id="flagConvertTo" alt="Bandeira conversão">
+                    <p class="currencyName" id="currency-name">Dólar Americano</p>
+                    <p class="amount" id="lblTo" aria-label="">U$ 0.00</p>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+<script src="./js/script.js"></script>
+</html>

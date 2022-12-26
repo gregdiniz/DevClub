@@ -1,0 +1,30 @@
+<!--
+    - Selecionando Elementos:
+        - getElementById() //Traz apenas um elemento, selecionando pelo ID
+        - getElementByClassName() //Traz diversos elementos, selecionando pelo nome da classe (HTML Collection)
+        - getElementByTagName() //Traz diversos elementos, selecionando pela tag (HTML Collection)
+        - getElementByName() //Traz diversos elementos com o nome selecionado (NodeList)
+
+        - querySelector //Traz apenas um elemento, o primeiro que encontrar(element)
+        - querySelectorAll //Traz todos os elemtos que encontrar (NodeList)
+
+        * HTML Collection - -> Não pode ser manipulado como um array
+        * NodeList -> Pode ser manipulado como um array
+-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selecionando Elementos</title>
+</head>
+<body>
+    <h1 id="myH1">Texto do meu H1</h1>
+    <input type="text" name="myInput" value="Valor do input">
+    <input type="button" value="Botão" name="myInput">
+    <p class="paragraph">Meu primeiro parágrafo</p>
+    <p class="paragraph">Meu segundo parágrafo</p>
+</body>
+<script src="./SelecionandoElementos.js"></script>
+</html>
