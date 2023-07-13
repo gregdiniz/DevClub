@@ -30,7 +30,7 @@ app.post('/users', (request, response)=>{
     const {name, age} = request.body
     const user = {id:importUUID.v4(), name, age}
     users.push(user)
-    return response.status(201).json({user})
+    return response.status(201).json(user)
 })
 
 app.put('/users/:id', checkUserID, (request, response)=>{

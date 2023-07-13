@@ -1,11 +1,13 @@
 const { json, request, response } = require('express')
 const importExpress = require('express')
 const importUUID = require('uuid')
+const cors = require('cors') //Bloqueia/Libera acessos do Front-End ao Back-End
 
 const app = importExpress()
 app.use(importExpress.json())
+app.use(cors())
 
-const port = 3000
+const port = 3001
 
 const orders = []
 
