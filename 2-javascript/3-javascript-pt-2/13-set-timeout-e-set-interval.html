@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>setTimeOut e setInterval</title>
+</head>
+<body>
+    <h1>0</h1>
+    <button onclick="stop()">stop</button>
+    <button onclick="start()">start</button>
+</body>
+<script>
+    //O setTimeout será executado apenas uma vez após a página ser carregada
+    //Há 3 maneira de fazer o setTimeout
+    /*setTimeout(() => {
+        alert("Executei depois de 3 segundos")
+    }, 3000);*/ //Tempo é dado em milissegundos (1000 mseg = 1 seg)
+    /*setTimeout( function() {
+        //executar o que estiver aqui
+    }, timeout);
+
+    function myFunction(){
+        //executar o que estiver aqui
+    }
+    setTimeout( myFunction, timeout);*/
+
+    //O setInterval será executado a cada X tempo, até que seja parado com clearInterval
+    /*let number = 0
+    setInterval(() => {
+        console.log(number++)
+    }, 1000);*/
+
+    let timer //O temporizador foi criado em uma variável para permitir o uso de diversos intervalos simultaneamente e quando houver a necessidade, podendo interromper algum intervalo específico.
+    let h1 = document.querySelector('h1')
+    let number = 0
+
+    function start(){
+    timer = setInterval(()=>{
+            number++
+            h1.textContent = number
+        }, 1000)
+    }
+
+    function stop(){
+        clearInterval(timer)
+    }
+
+</script>
+</html>
