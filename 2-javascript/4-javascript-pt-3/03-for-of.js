@@ -1,4 +1,6 @@
-/*Estrutura de Repetição - FOR OF */
+/*Estrutura de Repetição - FOR OF 
+Usando para iterar item por item de uma string ou array
+*/
 
 let myName = 'Gregory'
 let allNames = ['João', 'Maria', 'Pedro', 'Antonio']
